@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<HTML>
+    <HEAD>
+        <TITLE>Welcome to CPS3740 Project</TITLE>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <style>
+            /* Styles for intro page */
+            body {
+                font-family: 'Roboto', sans-serif;
+                background-color: #6667a3;
+                color: #fff;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                flex-direction: column;
+            }
+
+            h1 {
+                font-weight: 700;
+            }
+
+            a {
+                color: #ffcc00;
+                text-decoration: none;
+                margin: 20px 0;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            .search-section, .login-section {
+                background-color: rgba(255, 255, 255, 0.1);
+                padding: 15px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                margin-bottom: 20px;
+            }
+
+            input[type='text'],
+            input[type='password'],
+            input[type='submit'] {
+                padding: 10px;
+                margin-bottom: 10px;
+                border: none;
+                border-radius: 5px;
+            }
+
+            input[type='submit'] {
+                background-color: #ffcc00;
+                color: #6667a3;
+                cursor: pointer;
+                font-weight: bold;
+            }
+
+            input[type='submit']:hover {
+                opacity: 0.9;
+            }
+
+            .login-section {
+                width: 300px;
+            }
+
+            .search-section {
+                width: 300px;
+            }
+
+            label {
+                color: #fff;
+            }
+        </style>
+    </HEAD>
+
+    <BODY>
+        <h1>Welcome to Christopher Paredes's CPS3740 Project</h1>
+
+        <div class="search-section">
+            <a href="view_customers.php" target="_blank">View all customers</a>
+            <p>Search product name (enter * to show all products):</p>
+            <form action='search_products.php' method='get'>
+                <input type='text' name='myproduct' required>
+                <input type='submit' value='Search'>
+            </form>
+        </div>
+
+        <div class="login-section">
+            <form action="login.php" method="get">
+                <label>Login ID:</label>
+                <input type="text" name="username" required="required">
+                <label>Password:</label>
+                <input type="password" name="password" required="required">
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </BODY>
+</HTML>
